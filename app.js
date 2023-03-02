@@ -30,8 +30,9 @@ app.use(
     store: MongoStore.create({
       mongoUrl: dbConfig.mongodb.connectTo(config.DB_NAME),
     }),
-  })
+  },app)
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
